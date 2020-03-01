@@ -1,16 +1,22 @@
 package com.company;
 
 public class PrimeNumber {
-    public static int enteredNumber(int x) {
+    public static boolean isSimpleNumber(int x) {
         int result = 0;
-        int y = 2;
-        result = x % y;
-        return result;
+        for (int y = 2; y < x; y++) {
+            result = x % y;
+            if (result == 0) {
+                return false;
+            }
+        }
+        return true;
     }
+
     public static void main(String[] args) {
-        int returnNumber;
-        returnNumber = enteredNumber(239);
-        String answer = (returnNumber !=0) ? "Yes." : "No.";
-        System.out.println("Is X prime number? - " + answer);
+        boolean isSimle;
+        int x = 7;
+        isSimle = isSimpleNumber(x);
+        String answer = (isSimle != true) ? "No." : "Yes.";
+        System.out.println("Is " + x + " prime number? - " + answer);
     }
 }
