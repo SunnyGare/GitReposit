@@ -31,7 +31,7 @@ public class FactorialsAmount {
     }
 
     @Test
-    public void testIsSimpleNumber() {
+    public void testSumOfFactorials() {
         int sum = FactorialsAmount.sumOfFactorials(5);
         assertEquals(101, sum);
         sum = FactorialsAmount.sumOfFactorials(4);
